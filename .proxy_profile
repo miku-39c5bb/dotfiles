@@ -1,0 +1,35 @@
+function proxy_on() {
+    # export http_proxy="http://192.168.4.101:7890"
+    # export https_proxy="http://192.168.4.101:7890"
+    # export ftp_proxy="http://192.168.4.101:7890"
+    # export no_proxy="localhost,127.0.0.1,::1"
+
+    # export http_proxy="http://192.168.137.1:7890"
+    # export https_proxy="http://192.168.137.1:7890"
+    # export ftp_proxy="http://192.168.137.1:7890"
+    # export no_proxy="localhost,127.0.0.1,::1"
+
+    #export http_proxy=http://127.0.0.1:7890
+    #export https_proxy=$http_proxy
+    echo -e "终端代理已开启。"
+}
+
+function proxy_off(){
+    unset http_proxy https_proxy ftp_proxy no_proxy
+    echo -e "终端代理已关闭。"
+}
+
+function proxy_test(){
+    echo -e "----------------------------------------------"
+    echo -e "test: curl -I http://www.google.com"
+    echo -e "----------------------------------------------"
+    curl -I http://www.google.com
+    echo -e "----------------------------------------------"
+    echo -e "test: curl -I https://api.telegram.org"
+    echo -e "----------------------------------------------"
+    curl -I https://api.telegram.org
+    echo -e "----------------------------------------------"
+    echo -e "test: wget www.google.com"
+    echo -e "----------------------------------------------"
+    wget www.google.com
+}
