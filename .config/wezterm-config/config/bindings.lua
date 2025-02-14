@@ -9,8 +9,8 @@ if platform.is_mac then
    mod.SUPER = 'SUPER'
    mod.SUPER_REV = 'SUPER|CTRL'
 elseif platform.is_win or platform.is_linux then
-   mod.SUPER = 'WIN' -- to not conflict with Windows key shortcuts
-   mod.SUPER_REV = 'WIN|CTRL'
+   mod.SUPER = 'ALT' -- to not conflict with Windows key shortcuts
+   mod.SUPER_REV = 'ALT|CTRL'
 end
 
 -- stylua: ignore
@@ -74,7 +74,7 @@ local keys = {
    { key = '0',          mods = mod.SUPER_REV, action = act.EmitEvent('tabs.reset-tab-title') },
 
    -- tab: hide tab-bar
-   { key = '9',          mods = mod.SUPER_REV,     action = act.EmitEvent('tabs.toggle-tab-bar'), },
+   { key = '9',          mods = mod.SUPER,     action = act.EmitEvent('tabs.toggle-tab-bar'), },
 
    -- window --
    -- window: spawn windows
