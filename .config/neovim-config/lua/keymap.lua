@@ -37,6 +37,7 @@ local Base = {
     cmd = {
         { { "n", "v" }, ";",  ":",           { nowait = true, desc = "enter commandline mode" } },
         { "n",          "q",  "<CMD>q!<CR>", { desc = "quit neovim" } },
+        { "n",          "q",  "<CMD>q!<CR>", { desc = "quit neovim" } },
         { "n",          "Q",  "q",           { desc = "macro record" } },
         { "n",          "g=", vim.g.format,  { desc = "format document" } },
         -- { "n",          "<leader>mk", "<CMD>wa<CR><CMD>!python3 ./build.py<CR>",           { desc = "build" } },
@@ -68,15 +69,15 @@ local Base = {
 
 local Plugin = {
     fzf = {
-        { "n", "<leader>w", function() require("fzf-lua").live_grep() end,           { desc = "search word" }, },
-        { "n", "<leader>cw", function() require("fzf-lua").grep_cWORD() end,           { desc = "search current word" }, },
-        { "n", "<leader>f", function() require("fzf-lua").files() end,               { desc = "search file" }, },
-        { "n", "z",         function() require("fzf-lua").buffers() end,             { desc = "search buffer" }, },
-        { "n", "ga",        function() require("fzf-lua").lsp_code_actions() end,    { desc = "code action" }, },
-        { "n", "gr",        function() require("fzf-lua").lsp_references() end,      { desc = "find reference" }, },
-        { "n", "gR",        '<Cmd>lua vim.lsp.buf.references()<CR>',                 { desc = "find reference" }, },
-        { "n", "gi",        function() require("fzf-lua").lsp_implementations() end, { desc = "find implementations" }, },
-        { "n", "gI",        '<Cmd>lua vim.lsp.buf.implementation()<CR>',             { desc = "find reference" }, },
+        { "n", "<leader>w",  function() require("fzf-lua").live_grep() end,           { desc = "search word" }, },
+        { "n", "<leader>cw", function() require("fzf-lua").grep_cWORD() end,          { desc = "search current word" }, },
+        { "n", "<leader>f",  function() require("fzf-lua").files() end,               { desc = "search file" }, },
+        { "n", "z",          function() require("fzf-lua").buffers() end,             { desc = "search buffer" }, },
+        { "n", "ga",         function() require("fzf-lua").lsp_code_actions() end,    { desc = "code action" }, },
+        { "n", "gr",         function() require("fzf-lua").lsp_references() end,      { desc = "find reference" }, },
+        { "n", "gR",         '<Cmd>lua vim.lsp.buf.references()<CR>',                 { desc = "find reference" }, },
+        { "n", "gi",         function() require("fzf-lua").lsp_implementations() end, { desc = "find implementations" }, },
+        { "n", "gI",         '<Cmd>lua vim.lsp.buf.implementation()<CR>',             { desc = "find reference" }, },
     },
     -- more keymaps in cmp.lua
     cmp = {},

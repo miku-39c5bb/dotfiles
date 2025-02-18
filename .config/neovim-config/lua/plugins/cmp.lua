@@ -72,8 +72,11 @@ return {
                         return { 'lsp', 'path', 'snippets', 'buffer' }
                     end
                 end,
-                cmdline = {},
+                -- cmdline = {},
 
+            },
+            completion = {
+                menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
             },
         },
     },
