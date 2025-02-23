@@ -35,11 +35,11 @@ local Base = {
         { "x", "a",           "A",      { desc = "column append" } },
     },
     cmd = {
-        { { "n", "v" }, ";",  ":",           { nowait = true, desc = "enter commandline mode" } },
-        { "n",          "q",  "<CMD>q!<CR>", { desc = "quit neovim" } },
-        { "n",          "q",  "<CMD>q!<CR>", { desc = "quit neovim" } },
-        { "n",          "Q",  "q",           { desc = "macro record" } },
-        { "n",          "g=", vim.g.format,  { desc = "format document" } },
+        { { "n", "v" }, ";",     ":",           { nowait = true, desc = "enter commandline mode" } },
+        { "n",          "q",     "<CMD>q!<CR>", { desc = "quit neovim" } },
+        { "n",          "Q",     "q",           { desc = "macro record" } },
+        { "n",          "g=",    vim.g.format,  { desc = "format document" } },
+        { "n",          "<C-s>", "<CMD>w<CR>",  { desc = "save file" } },
         -- { "n",          "<leader>mk", "<CMD>wa<CR><CMD>!python3 ./build.py<CR>",           { desc = "build" } },
         -- { "n",          "<leader>cl", "<CMD>!python3 ./build.py clean<CR>",                { desc = "build" } },
     },
@@ -69,6 +69,7 @@ local Base = {
 
 local Plugin = {
     fzf = {
+        { "n", "<leader>F",  function() vim.cmd("FzfLua") end,                        { desc = "fzf-lua" }, },
         { "n", "<leader>w",  function() require("fzf-lua").live_grep() end,           { desc = "search word" }, },
         { "n", "<leader>cw", function() require("fzf-lua").grep_cWORD() end,          { desc = "search current word" }, },
         { "n", "<leader>f",  function() require("fzf-lua").files() end,               { desc = "search file" }, },

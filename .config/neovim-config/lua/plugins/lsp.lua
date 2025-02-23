@@ -82,6 +82,7 @@ return {
                     }
                 }
             }
+            lspconfig.cmake.setup {}
 
             local other_servers = {
                 "gopls",
