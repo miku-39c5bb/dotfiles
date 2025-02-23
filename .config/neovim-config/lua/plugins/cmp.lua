@@ -75,9 +75,9 @@ return {
                 -- cmdline = {},
 
             },
-            completion = {
-                menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
-            },
+            -- completion = {
+            --     menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
+            -- },
         },
     },
     {
