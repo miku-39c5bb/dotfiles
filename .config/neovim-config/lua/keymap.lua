@@ -39,6 +39,7 @@ local Base = {
         { "n",          "q",     "<CMD>q!<CR>", { desc = "quit neovim" } },
         { "n",          "Q",     "q",           { desc = "macro record" } },
         { "n",          "g=",    vim.g.format,  { desc = "format document" } },
+        { "n",          "<M-F>", vim.g.format,  { desc = "format document" } },
         { "n",          "<C-s>", "<CMD>w<CR>",  { desc = "save file" } },
         -- { "n",          "<leader>mk", "<CMD>wa<CR><CMD>!python3 ./build.py<CR>",           { desc = "build" } },
         -- { "n",          "<leader>cl", "<CMD>!python3 ./build.py clean<CR>",                { desc = "build" } },
