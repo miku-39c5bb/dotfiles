@@ -144,6 +144,19 @@ local Plugin = {
             }):toggle()
         end, { desc = "open git in fterm" } },
     },
+    aerial = {
+        { "n", "<leader>a", "<cmd>AerialToggle!<CR>",   { desc = "open outline" } },
+        { "n", "<leader>A", "<cmd>AerialNavToggle<CR>", { desc = "open outline" } },
+        { "n", "{",         "<cmd>AerialPrev<CR>",      { desc = "prev symbol" } },
+        { "n", "}",         "<cmd>AerialNext<CR>",      { desc = "next symbol" } },
+    },
+    neogit = {
+        -- { "n", "<A-G>", "<cmd>Neogit<CR>", { desc = "open neogit" } },
+        { "n", "<leader>G", "<cmd>Neogit<CR>", { desc = "open neogit" } },
+    },
+    diffview = {
+        { "n", "<leader>d", "<cmd>DiffviewFileHistory<CR>", { desc = "open diffview file history" } },
+    },
 }
 
 vim.g.register_keymap(Base)
