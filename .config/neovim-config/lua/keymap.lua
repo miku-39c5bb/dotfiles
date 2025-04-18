@@ -155,7 +155,8 @@ local Plugin = {
         { "n", "<leader>G", "<cmd>Neogit<CR>", { desc = "open neogit" } },
     },
     diffview = {
-        { "n", "<leader>d", "<cmd>DiffviewFileHistory<CR>", { desc = "open diffview file history" } },
+        { "n", "<leader>d", "<cmd>DiffviewFileHistory %<CR>", { desc = "open diffview file history" } },
+        { "n", "<leader>D", "<cmd>DiffviewFileHistory<CR>", { desc = "open diffview file history" } },
     },
 }
 
