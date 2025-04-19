@@ -145,6 +145,7 @@ local Plugin = {
         end, { desc = "open git in fterm" } },
     },
     aerial = {
+        { "n", "<F3>",      "<cmd>AerialToggle!<CR>",   { desc = "open outline" } },
         { "n", "<leader>a", "<cmd>AerialToggle!<CR>",   { desc = "open outline" } },
         { "n", "<leader>A", "<cmd>AerialNavToggle<CR>", { desc = "open outline" } },
         { "n", "{",         "<cmd>AerialPrev<CR>",      { desc = "prev symbol" } },
@@ -156,7 +157,11 @@ local Plugin = {
     },
     diffview = {
         { "n", "<leader>d", "<cmd>DiffviewFileHistory %<CR>", { desc = "open diffview file history" } },
-        { "n", "<leader>D", "<cmd>DiffviewFileHistory<CR>", { desc = "open diffview file history" } },
+        { "n", "<leader>D", "<cmd>DiffviewFileHistory<CR>",   { desc = "open diffview file history" } },
+    },
+    nvim_tree = {
+        { "n", "<A-e>", "<cmd>NvimTreeToggle<CR>", { desc = "open nvim tree, file browser" } },
+        { "n", "<F2>",  "<cmd>NvimTreeToggle<CR>", { desc = "open nvim tree, file browser" } },
     },
 }
 
