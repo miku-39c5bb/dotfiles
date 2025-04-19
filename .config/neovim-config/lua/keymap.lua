@@ -160,8 +160,8 @@ local Plugin = {
         { "n", "<leader>D", "<cmd>DiffviewFileHistory<CR>",   { desc = "open diffview file history" } },
     },
     nvim_tree = {
-        { "n", "<A-e>", "<cmd>NvimTreeToggle<CR>", { desc = "open nvim tree, file browser" } },
-        { "n", "<F2>",  "<cmd>NvimTreeToggle<CR>", { desc = "open nvim tree, file browser" } },
+        { "n", "<A-e>", "<cmd>NvimTreeToggle<CR><cmd>SmartCursorMoveRight<CR>", { desc = "open nvim tree, file browser" } },
+        { "n", "<F2>",  "<cmd>NvimTreeToggle<CR><cmd>SmartCursorMoveRight<CR>", { desc = "open nvim tree, file browser" } },
     },
 }
 
