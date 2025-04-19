@@ -154,6 +154,7 @@ local Plugin = {
     neogit = {
         -- { "n", "<A-G>", "<cmd>Neogit<CR>", { desc = "open neogit" } },
         { "n", "<leader>G", "<cmd>Neogit<CR>", { desc = "open neogit" } },
+        { "n", "<F4>",      "<cmd>Neogit<CR>", { desc = "open neogit" } },
     },
     diffview = {
         { "n", "<leader>d", "<cmd>DiffviewFileHistory %<CR>", { desc = "open diffview file history" } },
