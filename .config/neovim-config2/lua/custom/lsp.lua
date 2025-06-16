@@ -1,6 +1,7 @@
 -- LSP, qi dong!
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
+vim.lsp.enable 'gopls'
 vim.lsp.enable 'pylsp'
 vim.lsp.enable 'ruff'
 vim.lsp.enable 'marksman'
