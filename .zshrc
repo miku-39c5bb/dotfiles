@@ -7,6 +7,7 @@ fi
 
 alias t=tmux
 alias v=nvim
+alias k="kitty --config ~/.config/kitty/kitty-notitle.conf"
 
 source ~/.proxy_profile
 source ~/.show_image
