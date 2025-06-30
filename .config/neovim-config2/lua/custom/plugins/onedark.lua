@@ -4,7 +4,7 @@ return {
   config = function()
     require('onedark').setup {
       style = 'deep', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-      transparent = true,  -- Show/hide background
+      -- transparent = true,  -- Show/hide background
     }
     -- Enable theme
     -- require('onedark').load()
