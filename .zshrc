@@ -9,6 +9,8 @@ alias t=tmux
 alias v=nvim
 alias k="kitty --config ~/.config/kitty/kitty-notitle.conf"
 
+source ~/.config/fzf/fzf_init.sh
+
 source ~/.proxy_profile
 source ~/.show_image
 
