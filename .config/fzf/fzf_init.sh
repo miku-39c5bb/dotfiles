@@ -11,4 +11,5 @@ source $HOME/.config/fzf/fzf_def.sh
 source $HOME/.config/fzf/fzf_fd.sh
 source $HOME/.config/fzf/fzf_ps.sh
 source $HOME/.config/fzf/fzf_rg.sh
+source $HOME/.config/fzf/fzf_show_image.sh
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+fzf_show_image() {
+  local img=$(find . -type f \( -iname '*.png' -o -iname '*.jpg' \) | fzf)
+  if [[ -n "$img" ]]; then
+    kitty +kitten icat "$img"
+  fi
+}
+
