@@ -9,6 +9,8 @@ source ~/.config/.alias.sh
 source ~/.config/fzf/fzf_init.sh
 source ~/.proxy_profile
 
+export LS_COLORS="di=1;36:fi=0:ln=35:ex=32"
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
