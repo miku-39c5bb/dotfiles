@@ -22,6 +22,11 @@ vim.keymap.set('n', '<space>x', ':.lua<cr>', { desc = 'Run this line' })
 vim.keymap.set('v', '<space>x', ':lua<cr>', { desc = 'Run selection' })
 vim.keymap.set('n', ';', ':', { desc = 'cmd mode' })
 
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+
 local feedkeys = vim.api.nvim_feedkeys
 local t = vim.api.nvim_replace_termcodes
 vim.keymap.set('n', '<leader>tz', function()
