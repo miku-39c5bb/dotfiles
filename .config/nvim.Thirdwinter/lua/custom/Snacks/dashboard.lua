@@ -43,7 +43,7 @@ return {
       { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
     },
     -- Used by the `header` section
-    header = require('custom.logo').A1,
+    header = require('custom.logo').miku,
   },
   -- item field formatters
   sections = {
