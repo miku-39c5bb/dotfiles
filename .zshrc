@@ -1,3 +1,5 @@
+# 参考地址：https://blog.csdn.net/a143730/article/details/135573409
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
