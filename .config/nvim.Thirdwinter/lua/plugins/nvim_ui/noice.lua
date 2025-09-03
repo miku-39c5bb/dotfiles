@@ -19,6 +19,27 @@ return {
       inc_rename = true,       -- enables an input dialog for inc-rename.nvim
       lsp_doc_border = false,  -- add a border to hover docs and signature help
     },
+    cmdline = {
+      format = {
+        search_down = {
+          view = 'cmdline',
+        },
+        search_up = {
+          view = 'cmdline',
+        },
+        substitute = {
+          pattern = {
+            '^:%s*%%s?n?o?m?/',
+            "^:'<,'>%s*s?n?m?/",
+            '^:%d+,%d+%s*s?n?m?/',
+          },
+          icon = ' /',
+          view = 'cmdline',
+          lang = 'regex',
+        },
+      },
+    },
+
     messages = {
       -- NOTE: If you enable messages, then the cmdline is enabled automatically.
       -- This is a current Neovim limitation.
@@ -73,7 +94,7 @@ return {
           style = vim.g.borderStyle,
         },
         win_options = {
-          winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
+          -- winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
         },
       },
       popupmenu = {
@@ -91,7 +112,7 @@ return {
           padding = { 0, 1 },
         },
         win_options = {
-          winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
+          -- winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
         },
       },
       hover = {
@@ -101,17 +122,17 @@ return {
         --   col = '50%',
         -- },
 
-        -- position = { row = 2, col = 3 },
+        position = { row = 2 },
 
         scrollbar = false,
         size = {
-          max_width = math.ceil(vim.api.nvim_win_get_width(0) * 0.5),
+          max_width = math.ceil(vim.api.nvim_win_get_width(0) * 0.4),
         },
         border = {
           style = vim.g.borderStyle,
         },
         win_options = {
-          winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
+          -- winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
         },
       },
       mini = {
@@ -124,7 +145,7 @@ return {
           col = '100%',
         },
         win_options = {
-          winhighlight = { Normal = 'Label', FloatBorder = 'FloatBorder' },
+          -- winhighlight = { Normal = 'Label', FloatBorder = 'FloatBorder' },
           winblend = 0,
         },
       },

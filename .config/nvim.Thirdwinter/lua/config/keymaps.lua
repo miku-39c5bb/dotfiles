@@ -36,13 +36,13 @@ vim.keymap.set('v', '<C-v>', '<C-R>+', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>h', '^', { desc = "jump first char in line" })
 
---  参见 `:help wincmd` 了解所有窗口命令的列表
 --INFO: 窗口分割
 vim.keymap.set('n', '\\', '<CMD>:sp<CR>', { desc = 'Split window horizontally' })
 vim.keymap.set('n', '|', '<CMD>:vsp<CR>', { desc = 'Split window vertically' })
 vim.keymap.set('n', '+', '<C-w>|<C-w>_', { desc = 'Maximize nvim pane' })
 vim.keymap.set('n', '=', '<C-w>=', { desc = 'Restore nvim panes' })
 
+--  参见 `:help wincmd` 了解所有窗口命令的列表
 --INFO: 窗口移动
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = '将焦点移动到左侧窗口' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = '将焦点移动到右侧窗口' })
