@@ -64,18 +64,27 @@ vim.keymap.set('v', '<A-k>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true
 vim.keymap.set('n', '<C-a>', '<cmd>normal! ggVG<cr>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-a>', '<esc><cmd>normal! ggVG<cr>', { noremap = true, silent = true })
 
+--INFO: 相对行号
+vim.keymap.set('n', '<leader>n', function()
+    vim.opt.relativenumber = not vim.opt.relativenumber:get()
+    if vim.opt.relativenumber:get() then
+      print("relative number: on")
+    else
+      print("relative number: off")
+    end
+end, { desc = "Toggle relative line numbers" })
+
 --INFO: 自动换行
 vim.keymap.set('n', '<leader>z', function()
   vim.opt.wrap = not vim.opt.wrap:get()
   if vim.opt.wrap:get() then
     vim.opt.linebreak = true
     vim.opt.showbreak = "↪\\"
-    print("wrap: on")
+    print("line wrap: on")
   else
-    print("wrap: off")
+    print("line wrap: off")
   end
 end, { desc = "Toggle line wrap" })
-
 
 --INFO: 关于注释
 vim.api.nvim_set_keymap('n', '<leader>/', 'gcc', { desc = '注释' })
