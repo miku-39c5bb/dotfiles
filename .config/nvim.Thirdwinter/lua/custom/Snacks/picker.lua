@@ -200,6 +200,13 @@ M.keys = {
     desc = 'Resume',
   },
   {
+    '<F5>',
+    function()
+      Snacks.picker.resume()
+    end,
+    desc = 'Resume',
+  },
+  {
     '<leader>fr',
     function()
       Snacks.picker.recent()
