@@ -115,7 +115,13 @@ return {
         Snacks.rename.rename_file()
       end,
       desc = "Rename File",
-    }
-
+    },
+    {
+      '<leader>d',
+      function()
+        Snacks.dashboard()
+      end,
+      desc = "Open Dashboard",
+    },
   }),
 }
