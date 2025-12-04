@@ -76,7 +76,8 @@ M.options = {
   win = {
     input = {
       keys = {
-        ['<Esc>'] = { 'close', mode = { 'n', 'i' } },
+        -- ['<Esc>'] = { 'close', mode = { 'n', 'i' } },
+        ['<A-q>'] = { 'close', mode = { 'n', 'i' } },
         ['<a-a>'] = {
           'cycle_win',
           mode = { 'i', 'n' }
