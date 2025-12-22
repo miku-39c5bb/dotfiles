@@ -1,5 +1,9 @@
 local max = vim.api.nvim_win_get_width(0)
 
+-- 在 Insert 模式下显式恢复上下移动，避免上下键被blink.cmp完全接管
+vim.keymap.set('i', '<Up>', '<Up>', { silent = true })
+vim.keymap.set('i', '<Down>', '<Down>', { silent = true })
+
 return function(_, opts)
   opts.signature = {
     enabled = true,
@@ -18,6 +22,39 @@ return function(_, opts)
     ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
     ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
     ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
+    -- 通过上下键进行选择
+    ['<Up>'] = { 'select_prev', 'fallback_to_mappings' },
+    ['<Down>'] = { 'select_next', 'fallback_to_mappings' },
+    -- 通过上下键选择，并避免上下键被blink.cmp完全接管 的第二种方式
+    -- 缺点：复杂，且blink.cmp api不稳定，这个方式可维护性差
+    -- ['<Up>'] = {
+    --   -- 'select_prev', 'fallback_to_mappings'
+    --   function(cmp)
+    --     if cmp.is_visible() then
+    --       cmp.select_prev()
+    --     else
+    --       vim.api.nvim_feedkeys(
+    --         vim.api.nvim_replace_termcodes('<Up>', true, false, true),
+    --         'n',
+    --         true
+    --       )
+    --     end
+    --   end,
+    -- },
+    -- ['<Down>'] = {
+    --   -- 'select_next', 'fallback_to_mappings'
+    --   function(cmp)
+    --     if cmp.is_visible() then
+    --       cmp.select_next()
+    --     else
+    --       vim.api.nvim_feedkeys(
+    --         vim.api.nvim_replace_termcodes('<Down>', true, false, true),
+    --         'n',
+    --         true
+    --       )
+    --     end
+    --   end,
+    -- },
     ['<C-j>'] = { 'select_and_accept' },
     ['<CR>'] = { 'select_and_accept', 'fallback' },
     ['<Tab>'] = {
